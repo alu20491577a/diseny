@@ -8,8 +8,8 @@
 get_header();
 if ( 2 == cryout_get_option ('kahuna_singlenav') ) { ?>
 	<nav id="nav-fixed">
-		<div class="nav-previous"><?php previous_post_link( '%link', '<i class="icon-fixed-nav"></i>' );  previous_post_link( '%link', '<span>%title</span>' );  ?></div>
-		<div class="nav-next"><?php next_post_link( '%link', '<i class="icon-fixed-nav"></i>' ); next_post_link( '%link', '<span>%title</span>' );  ?></div>
+		<div class="nav-previous"><?php previous_post_link( '%link', '<em class="icon-fixed-nav"></i>' );  previous_post_link( '%link', '<span>%title</span>' );  ?></div>
+		<div class="nav-next"><?php next_post_link( '%link', '<em class="icon-fixed-nav"></i>' ); next_post_link( '%link', '<span>%title</span>' );  ?></div>
 	</nav>
 <?php } ?>
 <div id="container" class="<?php echo kahuna_get_layout_class(); ?>">

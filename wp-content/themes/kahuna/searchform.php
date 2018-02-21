@@ -11,5 +11,5 @@
 		<span class="screen-reader-text"><?php echo _e( 'Search for:', 'kahuna' ); ?></span>
 		<input type="search" class="s" placeholder="<?php echo esc_attr_e( 'To search type and press enter', 'kahuna' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
 	</label>
-	<button type="submit" class="searchsubmit"><span class="screen-reader-text"><?php echo _e( 'Search', 'kahuna' ); ?></span><i class="icon-search"></i></button>
+	<button type="submit" class="searchsubmit"><span class="screen-reader-text"><?php echo _e( 'Search', 'kahuna' ); ?></span><em class="icon-search"></em></button>
 </form>
