@@ -7,9 +7,8 @@
 ?>
 
 <form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<label>
-		<span class="screen-reader-text"><?php echo _e( 'Search for:', 'kahuna' ); ?></span>
+	<label for="search">Search:
 		<input type="search" class="s" placeholder="<?php echo esc_attr_e( 'To search type and press enter', 'kahuna' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
 	</label>
-	<button type="submit" class="searchsubmit"><span class="screen-reader-text"><?php echo _e( 'Search', 'kahuna' ); ?></span><i class="icon-search"></i></button>
+	<button type="submit" class="searchsubmit"><span class="screen-reader-text"><?php echo _e( 'Search', 'kahuna' ); ?></span><em class="icon-search"></em></button>
 </form>
