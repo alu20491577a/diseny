@@ -28,7 +28,7 @@
 			<div id="site-header-main-inside">
 
 				<nav id="mobile-menu">
-					<span id="nav-cancel"><i class="icon-cancel"></i></span>
+					<span id="nav-cancel"><em class="icon-cancel"></em></span>
 					<?php cryout_mobilemenu_hook(); ?>
 				</nav> <!-- #mobile-menu -->
 
@@ -40,7 +40,7 @@
 					<?php cryout_header_socials_hook();?>
 				</div>
 
-				<a id="nav-toggle"><i class="icon-menu"></i></a>
+				<a id="nav-toggle"><em class="icon-menu"></em></a>
 				<nav id="access" role="navigation"  aria-label="<?php esc_attr_e( 'Primary Menu', 'kahuna' ) ?>" <?php cryout_schema_microdata( 'menu' ); ?>>
 					<?php cryout_access_hook();?>
 				</nav><!-- #access -->

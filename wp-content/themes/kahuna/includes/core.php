@@ -143,16 +143,16 @@ endif;
 if ( ! function_exists( 'kahuna_header_title_check' ) ) :
 function kahuna_header_title_check() {
     $options = cryout_get_option( array( 'kahuna_headertitles_posts', 'kahuna_headertitles_pages', 'kahuna_headertitles_archives', 'kahuna_headertitles_home' ) );
-	
+
 	// woocommerce should never use header titles
 	if (function_exists('is_woocommerce') && is_woocommerce()) return false;
-	
+
 	// theme's landing page
 	if ( cryout_on_landingpage() && $options['kahuna_headertitles_home'] ) return true;
-	
+
 	// blog section
 	if ( is_home() && $options['kahuna_headertitles_home'] ) return true;
-	
+
 	// other instances
 	if ( ( is_single() && $options['kahuna_headertitles_posts'] ) ||
     ( is_page() && $options['kahuna_headertitles_pages'] && ! cryout_on_landingpage() ) ||
@@ -253,7 +253,7 @@ add_action( 'cryout_singular_after_inner_hook', 'cryout_schema_main' );
  * Creates div for js
 */
 function kahuna_back_top() {
-	echo '<div id="toTop"><i class="icon-back2top"></i> </div>';
+	echo '<div id="toTop"><em class="icon-back2top"></em> </div>';
 } // kahuna_back_top()
 add_action ( 'cryout_master_footerbottom_hook', 'kahuna_back_top' );
 
@@ -266,8 +266,8 @@ function kahuna_pagination( $pages = '', $range = 2, $prefix ='' ) {
 	$pagination = cryout_get_option( 'kahuna_pagination' );
 	if ( $pagination && function_exists( 'the_posts_pagination' ) ):
 		the_posts_pagination( array(
-			'prev_text' => '<i class="icon-pagination-left"></i>',
-			'next_text' => '<i class="icon-pagination-right"></i>',
+			'prev_text' => '<em class="icon-pagination-left"></em>',
+			'next_text' => '<em class="icon-pagination-right"></em>',
 			'mid_size' => $range
 		) );
 	else:
@@ -390,8 +390,8 @@ add_filter( 'body_class', 'kahuna_mobile_body_class');
 if ( ! function_exists( 'kahuna_breadcrumbs' ) ) :
 function kahuna_breadcrumbs() {
 	cryout_breadcrumbs(
-		'<i class="icon-bread-arrow"></i>',						// $separator
-		'<i class="icon-bread-home"></i>', 						// $home
+		'<em class="icon-bread-arrow"></em>',						// $separator
+		'<em class="icon-bread-home"></em>', 						// $home
 		1,														// $showCurrent
 		'<span class="current">', 								// $before
 		'</span>', 												// $after
@@ -420,7 +420,7 @@ function cryout_search_menu( $items, $args ) {
 $options = cryout_get_option( array( 'kahuna_searchboxmain', 'kahuna_searchboxfooter' ) );
 	if( $args->theme_location == 'primary' && $options['kahuna_searchboxmain'] ) {
 		$container_class = 'menu-main-search';
-		$items .= "<li class='" . $container_class . " menu-search-animated'><i class='icon-search'></i>" . get_search_form( false ) . " <i class='icon-cancel'></i></li>";
+		$items .= "<li class='" . $container_class . " menu-search-animated'><em class='icon-search'></em>" . get_search_form( false ) . " <em class='icon-cancel'></em></li>";
 	}
 	if( $args->theme_location == 'footer' && $options['kahuna_searchboxfooter'] ) {
 		$container_class = 'menu-footer-search';
