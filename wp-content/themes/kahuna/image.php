@@ -23,7 +23,7 @@ get_header(); ?>
 								// Retrieve attachment metadata.
 								$metadata = wp_get_attachment_metadata();
 								if ( $metadata ) {
-									printf( '<span class="full-size-link"><span class="screen-reader-text">%1$s </span><i class="icon-image icon-metas" title="%1$s"></i> <a href="%2$s">%3$s &times; %4$s </a>%5$s</span>',
+									printf( '<span class="full-size-link"><span class="screen-reader-text">%1$s </span><em class="icon-image icon-metas" title="%1$s"></em> <a href="%2$s">%3$s &times; %4$s </a>%5$s</span>',
 										esc_html_x( 'Full size', 'Used before full size attachment link.', 'kahuna' ),
 										esc_url( wp_get_attachment_url() ),
 										absint( $metadata['width'] ),
@@ -35,7 +35,7 @@ get_header(); ?>
 								// Retrieve attachment parent post.
 								if ( ! empty( $post->post_parent ) ) :  ?>
 									<span class="published-in">
-										<i class="icon-book icon-metas" title="<?php esc_attr_e( 'Published in', 'kahuna' ); ?>"></i>
+										<em class="icon-book icon-metas" title="<?php esc_attr_e( 'Published in', 'kahuna' ); ?>"></em>
 										<a href="<?php echo esc_url( get_permalink( $post->post_parent ) ) ?>">
 											<?php echo get_the_title( $post->post_parent );?>
 										</a>
@@ -62,8 +62,8 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 
 					<div id="nav-below" class="navigation image-navigation">
-						<div class="nav-previous"><?php previous_image_link( false, '<i class="icon-angle-left"></i>' . __( "Previous image", "kahuna" ) ); ?></div>
-						<div class="nav-next"><?php next_image_link( false, __("Next image", "kahuna") . '<i class="icon-angle-right"></i>' ); ?></div>
+						<div class="nav-previous"><?php previous_image_link( false, '<em class="icon-angle-left"></em>' . __( "Previous image", "kahuna" ) ); ?></div>
+						<div class="nav-next"><?php next_image_link( false, __("Next image", "kahuna") . '<em class="icon-angle-right"></em>' ); ?></div>
 					</div><!-- #nav-below -->
 
 					<footer class="entry-meta entry-utility">

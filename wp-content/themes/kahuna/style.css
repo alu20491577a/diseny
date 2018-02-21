@@ -1780,14 +1780,37 @@ span.edit-link .icon-edit::before {
 	background-clip: padding-box;
 }
 
-#header-page-title .entry-title {
-	display: inline-block;
-	float: left;
-	opacity: 0;
-	max-width: 70%;
-	-webkit-animation: .7s .75s animation-fadeIn forwards;
-	animation: .7s .75s animation-fadeIn forwards;
-}
+#header-page-title.entry-title{
+						 display:inline-block;
+						 float:left;
+						 opacity:0;
+						 max-width:70%;
+						 -webkit-animation:.7s .75s animation-fadeIn forwards;
+						 animation:.7s .75s animation-fadeIn forwards;
+			 }
+
+ #header-page-title-inside{
+						 position:relative;
+						 overflow:hidden;
+						 margin:0 auto;
+						 padding:2em 2em;
+						 color:#FFF;
+						 background-clip:padding-box;
+			 }
+  #header-page-title{
+						 position:relative;
+						 padding:0;
+			 }
+
+	body{
+			font-size:1em;
+			 }
+
+	h1{ h1,h2,h3,h4,h5,
+		
+ clear:both;
+						 font-weight:normal;
+			 }
 
 #header-page-title #breadcrumbs-container {
 	position: absolute;

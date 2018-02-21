@@ -373,8 +373,8 @@ function cryout_get_featured_srcset( $attachment_id, $sizes = array() ) {
 
 } // cryout_get_featured_srcset()
 
-/** 
- * Returns featured image sizes for srcset functionality based on magazine layout option 
+/**
+ * Returns featured image sizes for srcset functionality based on magazine layout option
  */
 function cryout_gen_featured_sizes( $default = 1440, $magazinelayout = false, $landingpage = false ) {
 	if ( $landingpage ) {
@@ -389,15 +389,15 @@ function cryout_gen_featured_sizes( $default = 1440, $magazinelayout = false, $l
 } // cryout_gen_featured_sizes()
 
 /**
- * Detects if theme has landing page functionality enabled and active 
+ * Detects if theme has landing page functionality enabled and active
  */
 function cryout_is_landingpage() {
 	$landingpage = cryout_get_option( cryout_sanitize_tnp( _CRYOUT_THEME_NAME ) . '_landingpage');
 	return ( $landingpage && ('page' == get_option( 'show_on_front' )) );
 } // cryout_is_landingpage()
 
-/** 
- * Detects if the code currently executed is on the landing page and the landing page is enabled and active 
+/**
+ * Detects if the code currently executed is on the landing page and the landing page is enabled and active
  */
 function cryout_on_landingpage() {
 	$landingpage = cryout_get_option( cryout_sanitize_tnp( _CRYOUT_THEME_NAME ) . '_landingpage');
@@ -732,8 +732,8 @@ endif;
 */
 if ( ! function_exists( 'cryout_breadcrumbs' ) ) :
 function cryout_breadcrumbs(
-			$separator = '<i class="icon-angle-right"></i>',						// separator between crumbs
-			$home = '<i class="icon-homebread"></i>', 								// text for the 'Home' item
+			$separator = '<em class="icon-angle-right"></em>',						// separator between crumbs
+			$home = '<em class="icon-homebread"></em>', 								// text for the 'Home' item
 			$showCurrent = 1,														// whether to show current post/page title in breadcrumbs
 			$before = '<span class="current">', 									// tag before the current crumb
 			$after = '</span>', 													// tag after the current crumb

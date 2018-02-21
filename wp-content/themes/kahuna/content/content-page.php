@@ -18,7 +18,7 @@
 			<header>
 				<?php the_title( '<h1 class="entry-title singular-title" ' . cryout_schema_microdata( 'entry-title', 0 ) . '>', '</h1>' ); ?>
 				<span class="entry-meta" >
-					<?php edit_post_link( __( 'Edit', 'kahuna' ), '<span class="edit-link"><i class="icon-edit"></i> ', '</span>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'kahuna' ), '<span class="edit-link"><em class="icon-edit"></em> ', '</span>' ); ?>
 				</span>
 			</header>
 
