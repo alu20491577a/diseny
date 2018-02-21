@@ -32,7 +32,7 @@ add_action( 'cryout_post_excerpt_hook', 'kahuna_custom_excerpt_more', 10 );
  */
 function kahuna_continue_reading_link() {
 	$kahuna_excerptcont = cryout_get_option( 'kahuna_excerptcont' );
-	return '<a class="continue-reading-link" href="'. esc_url( get_permalink() ) . '"><span>' . wp_kses_post( $kahuna_excerptcont ). '<i class="icon-continue-reading"></i></span></a>';
+	return '<a class="continue-reading-link" href="'. esc_url( get_permalink() ) . '"><span>' . wp_kses_post( $kahuna_excerptcont ). '<em class="icon-continue-reading"></em></span></a>';
 }
 add_filter( 'the_content_more_link', 'kahuna_continue_reading_link' );
 
@@ -82,7 +82,7 @@ function kahuna_posted_category() {
 
 	if ( $kahuna_meta_category && get_the_category_list() ) {
 		echo '<span class="bl_categ"' . cryout_schema_microdata( 'category', 0 ) . '>
-					<i class="icon-category icon-metas" title="' . esc_attr__( "Categories", "kahuna" ) . '"></i><span class="category-metas"> '
+					<em class="icon-category icon-metas" title="' . esc_attr__( "Categories", "kahuna" ) . '"></em><span class="category-metas"> '
 					 . get_the_category_list( ' <span class="sep">/</span> ' ) .
 				'</span></span>';
 	}
@@ -100,7 +100,7 @@ function kahuna_posted_author() {
 	if ( $kahuna_meta_author ) {
 		echo sprintf(
 			'<span class="author vcard"' . cryout_schema_microdata( 'author', 0 ) . '>
-				<i class="icon-author icon-metas" title="' . esc_attr__( "Author", "kahuna" ) . '"></i>
+				<em class="icon-author icon-metas" title="' . esc_attr__( "Author", "kahuna" ) . '"></em>
 				<a class="url fn n" rel="author" href="%1$s" title="%2$s"' . cryout_schema_microdata( 'author-url', 0 ) . '>
 					<em' .  cryout_schema_microdata( 'author-name', 0 ) . '>%3$s</em>
 				</a>
@@ -156,7 +156,7 @@ function kahuna_posted_date() {
 		?>
 
 		<span class="onDate date" >
-				<i class="icon-date icon-metas" title="<?php esc_attr_e( "Date", "kahuna" ) ?>"></i>
+				<em class="icon-date icon-metas" title="<?php esc_attr_e( "Date", "kahuna" ) ?>"></em>
 				<time class="published" datetime="<?php echo get_the_time( 'c' ) ?>" <?php cryout_schema_microdata( 'time' ) ?>>
 					<?php echo $date . ( ( $kahuna_meta_date && $kahuna_meta_time ) ? ', ' : '' ) . $time ?>
 				</time>
@@ -176,7 +176,7 @@ function kahuna_posted_tags() {
 	$tag_list = get_the_tag_list( '', ' / ' );
 	if ( $kahuna_meta_tag && $tag_list ) { ?>
 		<span class="tags" <?php cryout_schema_microdata( 'tags' ) ?>>
-				<i class="icon-tag icon-metas" title="<?php esc_attr_e( 'Tagged', 'kahuna' ) ?>"></i>&nbsp;<?php echo $tag_list ?>
+				<em class="icon-tag icon-metas" title="<?php esc_attr_e( 'Tagged', 'kahuna' ) ?>"></em>&nbsp;<?php echo $tag_list ?>
 		</span>
 		<?php
 	}
@@ -188,7 +188,7 @@ endif;
  */
 if ( ! function_exists( 'kahuna_posted_edit' ) ) :
 function kahuna_posted_edit() {
-	edit_post_link( __( 'Edit', 'kahuna' ), '<span class="edit-link icon-metas"><i class="icon-edit icon-metas"></i> ', '</span>' );
+	edit_post_link( __( 'Edit', 'kahuna' ), '<span class="edit-link icon-metas"><em class="icon-edit icon-metas"></em> ', '</span>' );
 }; // kahuna_posted_edit()
 endif;
 
@@ -201,7 +201,7 @@ function kahuna_meta_format() {
 	$format = get_post_format();
 	if ( is_sticky() ) echo '<span class="entry-sticky">' . __('Featured', 'kahuna') . '</span>';
 	if ( current_theme_supports( 'post-formats', $format ) ) {
-		printf( '<span class="entry-format"><a href="%1$s"><i class="icon-%2$s" title="%3$s"></i> %2$s</a></span>',
+		printf( '<span class="entry-format"><a href="%1$s"><em class="icon-%2$s" title="%3$s"></em> %2$s</a></span>',
 			esc_url( get_post_format_link( $format ) ),
 			$format,
 			get_post_format_string( $format )
@@ -259,11 +259,11 @@ function kahuna_content_nav( $nav_id ) {
 		<nav id="<?php echo $nav_id; ?>" class="navigation">
 
 			<span class="nav-previous">
-				 <?php next_posts_link( '<i class="icon-angle-left"></i>' . __( 'Older posts', 'kahuna' ) ); ?>
+				 <?php next_posts_link( '<em class="icon-angle-left"></em>' . __( 'Older posts', 'kahuna' ) ); ?>
 			</span>
 
 			<span class="nav-next">
-				<?php previous_posts_link( __( 'Newer posts', 'kahuna' ) . '<i class="icon-angle-right"></i>' ); ?>
+				<?php previous_posts_link( __( 'Newer posts', 'kahuna' ) . '<em class="icon-angle-right"></em>' ); ?>
 			</span>
 
 		</nav><!-- #<?php echo $nav_id; ?> -->
